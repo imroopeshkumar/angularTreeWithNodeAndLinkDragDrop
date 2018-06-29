@@ -1,0 +1,105 @@
+/* p {
+  font-family: Lato;
+}
+.graph-container .node text {
+  font-size: 0.9em;
+  transition: font-size ease-in-out 0.2s;
+}
+
+.graph-container .node circle {
+}
+
+.graph-container .node:hover {
+  cursor: pointer;
+}
+
+.graph-container .node:hover text {
+  font-size: 1em;
+}
+
+.graph-container .node:hover circle {
+  r: 12;
+}
+*/
+:host ::ng-deep .link {
+    fill: none;
+    /*stroke: #ccc;*/
+    stroke-width: 2px;
+    stroke: green
+}
+
+:host ::ng-deep .link2 {
+  fill: none;
+  /*stroke: #ccc;*/
+  stroke-width: 2px;
+  stroke:blue;
+}
+
+:host ::ng-deep .link:hover {
+    stroke: red;
+}
+
+.graph-container .link.upsale {
+  stroke: #15a31f;
+}
+
+.graph-container .link.downsale {
+  stroke: #FF0000;
+}
+
+.graph-container marker.upsale_marker {
+  fill: #15a31f;
+}
+
+.graph-container marker.downsale_marker {
+  fill: #FF0000;
+}
+
+.view{
+	fill:#fff
+} 
+
+.ghostCircle.show{
+  display:block;
+}
+
+.ghostCircle, .activeDrag .ghostCircle{
+   display: none;
+}
+
+:host ::ng-deep .templink {
+    fill: none;
+    stroke: red;
+    stroke-width: 3px;
+}
+
+:host ::ng-deep .oldlink {
+    fill: none !important;
+    stroke: transparent !important;
+   
+}
+
+
+#commonPos {
+    display: inline-flex;
+    position: absolute;
+    width: 15vw;
+    top: 0vw;
+    left: 15vw;
+}
+
+.arrowImg {
+    width: 2vw;
+    height: 2vw;
+    cursor: -webkit-grab;
+    cursor: grab;
+    background-color: black;
+}
+
+.inputField {
+    width: 10vw;
+    height:2vw;
+    font-size: 1vw;
+    color:black;
+}
+
