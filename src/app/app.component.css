@@ -25,7 +25,6 @@
     fill: none;
     /*stroke: #ccc;*/
     stroke-width: 2px;
-    stroke: green
 }
 
 :host ::ng-deep .link2 {

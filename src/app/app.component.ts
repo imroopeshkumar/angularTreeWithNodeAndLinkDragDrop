@@ -34,7 +34,7 @@ export class AppComponent {
     /**
      * Defining current height for aspectratio purpose
      */
-
+count=0;
     currentHeight: number;
     /**
      * Assigning the current width to a variable
@@ -128,6 +128,10 @@ export class AppComponent {
         treeeeee = treeeeee[0];
         this.renderTree(treeeeee, this.nodeClickHandler);
         let property = 'specialParents';
+
+        d3.select('body').on('click', ()=>{
+            // console.log(d3.mouse(this));
+        })
 
     }
     /**
@@ -303,6 +307,9 @@ export class AppComponent {
             .attr("d", "M0,-5L10,0L0,5")
 
         this.root = d3.hierarchy(root, (d) => { return d.Children; });
+
+        this.root.eachBefore((d)=> {this.count+=1;
+            console.log(this.count)})
 
         this.intializeNodesLinks();
 
@@ -866,12 +873,12 @@ export class AppComponent {
         this.link = link
 
         constants.data.forEach(element => {
-            if ('specialParents' in element) {
-                console.log(element);
-                element.specialParents.forEach(e => {
-                    this.addSpecialParent2(element, e);
-                });
-            }
+            // if ('specialParents' in element) {
+            //     console.log(element);
+            //     element.specialParents.forEach(e => {
+            //         this.addSpecialParent2(element, e);
+            //     });
+            // }
         })
 
         function linkDragStart(d) {
@@ -969,6 +976,7 @@ export class AppComponent {
             .attr("class", (d) => {
                 return constants.renderOptions.classes.linkClass;
             })
+            .attr('stroke', 'blue')
             .call(d3.drag()
                 .on("start", linkDragStart)
                 .on("drag", linkDragging)
@@ -1400,6 +1408,9 @@ export class AppComponent {
 
     click(d) {
         console.log('single click');
+        let sel = d3.select(d).node();
+        let u = d3.clientPoint(sel, 'click');
+        // console.log(d3.mouse(sel));
         var self = this;
         if (d.children && d._children == null) {
             d._children = d.children;
