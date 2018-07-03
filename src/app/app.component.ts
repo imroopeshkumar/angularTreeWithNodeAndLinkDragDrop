@@ -124,8 +124,9 @@ count=0;
      */
     ngAfterViewInit() {
         console.log(constants.data);
-        let treeeeee = this.flatToHierarchy(constants.data);
+        let treeeeee = this.flatToHierarchy(constants.data2);
         treeeeee = treeeeee[0];
+        console.log(treeeeee)
         this.renderTree(treeeeee, this.nodeClickHandler);
         let property = 'specialParents';
 
@@ -161,6 +162,8 @@ count=0;
         list.forEach(Element => {
             all[Element.EntityId] = Element;
         });
+
+        console.log(JSON.stringify(all))
 
         // console.log(all);
 
@@ -308,9 +311,6 @@ count=0;
 
         this.root = d3.hierarchy(root, (d) => { return d.Children; });
 
-        this.root.eachBefore((d)=> {this.count+=1;
-            console.log(this.count)})
-
         this.intializeNodesLinks();
 
 
@@ -415,21 +415,21 @@ count=0;
                 console.log(ex.message);
             }
         });
-        linkdata.each(function (d) {
-            try {
-                if (d.data.parent.id) {
+        // linkdata.each(function (d) {
+        //     try {
+        //         if (d.data.parent.id) {
 
-                    if (d.data.parent.id == "lkjhgfdsa098765") {
-                        d3.select(this).remove();
-                    }
-                }
-            }
-            catch (ex) {
-                console.log(ex);
-                return;
-            }
+        //             if (d.data.parent.id == "lkjhgfdsa098765") {
+        //                 d3.select(this).remove();
+        //             }
+        //         }
+        //     }
+        //     catch (ex) {
+        //         console.log(ex);
+        //         return;
+        //     }
 
-        });
+        // });
 
 
 
@@ -641,6 +641,7 @@ count=0;
         //    .attr("y", -15)
         //    .attr("width", 33)
         //    .attr("height", 33)
+            d3.select('svg').selectAll('text').remove();
 
         nodeEnter.append('circle').attr('r', 25)
         nodeUpdate.append("text")
@@ -933,7 +934,7 @@ count=0;
                 if (!d.target.data.dockable)
                     return "url(#upsale" + constants.renderOptions.markerClassEnd + ")";
                 else
-                    return null
+                    return null;
             })
 
         // Remove any exiting links
@@ -1312,7 +1313,7 @@ count=0;
     redrawGraph() {
         $('svg').remove();
         this.svg = null;
-        this.renderTree(this.generateTree(constants.data), this.nodeClickHandler);
+        this.renderTree(this.generateTree(constants.data2), this.nodeClickHandler);
 
     }
 

@@ -61,7 +61,7 @@ export const renderOptions = {
 		circleCssStyles: CIRCLE_CSS_STYLES
 	};
 
-//   export const data =[
+//   export const data2 =[
 //   {
 //     "parent": {
 //       "id": "",
@@ -135,94 +135,94 @@ export const renderOptions = {
   
 // ]
 
-// export const data = [
-// 	{
-// 	  "parent": {
-// 		"id": "",
-// 		"text": null
-// 	  },
-// 	  "Children": [],
-// 	  "Icon": null,
-// 	  "Name": "lkjhgfdsa098765",
-// 	  "BoundaryName": null,
-// 	  "AreaName": null,
-// 	  "Location": null,
-// 	  "ModifiedBy": null,
-// 	  "EntityId": "lkjhgfdsa098765",
-// 	  "EntityType": null,
-// 	  "typeOfFiled": null,
-// 	  "formValidate": false
-// 	},
-// 	{
-// 	  "parent": {
-// 		"id": "lkjhgfdsa098765",
-// 		"text": "lkjhgfdsa098765"
-// 	  },
-// 	  "Children": [],
-// 	  "Icon": null,
-// 	  "Name": "kkk",
-// 	  "BoundaryName": null,
-// 	  "AreaName": null,
-// 	  "Location": null,
-// 	  "ModifiedBy": null,
-// 	  "EntityId": "666",
-// 	  "EntityType": null,
-// 	  "typeOfFiled": null,
-// 	  "formValidate": false
-// 	//   "specialParents": [
-// 	// 	{
-// 	// 	  "id": "lkjhgfdsa098765",
-// 	// 	  "color_code": "transparent"
-// 	// 	}
-// 	//   ]
-// 	},{
-// 		"parent": {
-// 		  "id": "666",
-// 		  "text": "kkk"
-// 		},
-// 		"Children": [],
-// 		"Icon": null,
-// 		"Name": "kkl",
-// 		"BoundaryName": null,
-// 		"AreaName": null,
-// 		"Location": null,
-// 		"ModifiedBy": null,
-// 		"EntityId": "6656",
-// 		"EntityType": null,
-// 		"typeOfFiled": null,
-// 		"formValidate": false,
-// 		 "specialParents": [
-// 		  {
-// 			"id": "666",
-// 			"color_code": "transparent"
-// 		  }
-// 		]
-// 	  },
-// 	  {
-// 		"parent": {
-// 		  "id": "lkjhgfdsa098765",
-// 		  "text": "lkjhgfdsa098765"
-// 		},
-// 		"Children": [],
-// 		"Icon": null,
-// 		"Name": "kkdfal",
-// 		"BoundaryName": null,
-// 		"AreaName": null,
-// 		"Location": null,
-// 		"ModifiedBy": null,
-// 		"EntityId": "66asdf56",
-// 		"EntityType": null,
-// 		"typeOfFiled": null,
-// 		"formValidate": false,
-// 		 "specialParents": [
-// 		  {
-// 			"id": "6656",
-// 			"color_code": "transparent"
-// 		  }
-// 		]
-// 	  }
+export const data2 = [
+	{
+	  "parent": {
+		"id": "",
+		"text": null
+	  },
+	  "Children": [],
+	  "Icon": null,
+	  "Name": "lkjhgfdsa098765",
+	  "BoundaryName": null,
+	  "AreaName": null,
+	  "Location": null,
+	  "ModifiedBy": null,
+	  "EntityId": "lkjhgfdsa098765",
+	  "EntityType": null,
+	  "typeOfFiled": null,
+	  "formValidate": false
+	},
+	{
+	  "parent": {
+		"id": "lkjhgfdsa098765",
+		"text": "lkjhgfdsa098765"
+	  },
+	  "Children": [],
+	  "Icon": null,
+	  "Name": "kkk",
+	  "BoundaryName": null,
+	  "AreaName": null,
+	  "Location": null,
+	  "ModifiedBy": null,
+	  "EntityId": "666",
+	  "EntityType": null,
+	  "typeOfFiled": null,
+	  "formValidate": false
+	//   "specialParents": [
+	// 	{
+	// 	  "id": "lkjhgfdsa098765",
+	// 	  "color_code": "transparent"
+	// 	}
+	//   ]
+	},{
+		"parent": {
+		  "id": "666",
+		  "text": "kkk"
+		},
+		"Children": [],
+		"Icon": null,
+		"Name": "kkl",
+		"BoundaryName": null,
+		"AreaName": null,
+		"Location": null,
+		"ModifiedBy": null,
+		"EntityId": "6656",
+		"EntityType": null,
+		"typeOfFiled": null,
+		"formValidate": false,
+		 "specialParents": [
+		  {
+			"id": "666",
+			"color_code": "transparent"
+		  }
+		]
+	  },
+	  {
+		"parent": {
+		  "id": "lkjhgfdsa098765",
+		  "text": "lkjhgfdsa098765"
+		},
+		"Children": [],
+		"Icon": null,
+		"Name": "kkdfal",
+		"BoundaryName": null,
+		"AreaName": null,
+		"Location": null,
+		"ModifiedBy": null,
+		"EntityId": "66asdf56",
+		"EntityType": null,
+		"typeOfFiled": null,
+		"formValidate": false,
+		 "specialParents": [
+		  {
+			"id": "6656",
+			"color_code": "transparent"
+		  }
+		]
+	  }
 	
-//    ]
+   ]
  export const data = [{"parent":{"id":"","text":null},"Children":[],"Icon":null,"Name":"lkjhgfdsa098765","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"lkjhgfdsa098765","EntityType":null,"typeOfFiled":null,"formValidate":false},{"parent":{"id":"571ba7d1-b0b2-49b4-904d-1a2c6a5c89f8","text":"Chandu Gas wellllll"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/TurbineMeter_Icon_23.42.svg","Name":"Turbine12345678","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"018e9250-8de1-43f6-92f0-20b5b729b7bd","EntityType":"Turbine","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"03e7c72e-2443-456a-bdd5-b9686b338cf7","text":"AREABnglr"},"Children":[],"Icon":" https://althingsblob.blob.core.windows.net/fdc/Field_Icon_81.97.svg","Name":"my field 2","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"01d6e406-f8c4-4ad6-84c2-fc58f89e5dfa","EntityType":"Field","typeOfFiled":"Hierarchy","formValidate":false},{"parent":{"id":"28a48e86-526b-4d55-aaa7-f07e8ac966d1","text":"Chandu Well"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"asdfghjkjhgfdjhghgfjhgf gfgf","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"02381670-0650-4469-8959-29e94cc09a1b","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"e700cd74-42ad-47c2-923b-cc91c876dd74","text":"GasWellNew"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"Ori4","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"0552c0aa-c8ed-491b-87d8-85994a23598d","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"249c91a0-fae3-4e76-87c5-221e1b0f8164","text":"GGGGG"},"Children":[],"Icon":" https://althingsblob.blob.core.windows.net/fdc/PDMeter_Icon_23.42.svg","Name":"FF pD","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"06a6cd91-b331-4d26-bc8b-9c2db4a48243","EntityType":"PDMeter","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"d7c0e3d9-2a0b-40f3-9173-197efad66989","text":"New Gas Well Biz"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/TurbineMeter_Icon_23.42.svg","Name":"New Turbine Biz","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"08702147-7130-4970-9092-244b47d8aa04","EntityType":"Turbine","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"0170754b-88b3-409e-9525-5538187817b2","text":"GasWell"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"Tank","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"0dacf90f-225e-4d66-9316-276dbfc2f25a","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"cd773652-affb-47e5-8e53-bac8fd537dcd","text":"Well"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"chandra tank","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"0fd060e3-043d-4a91-ab8e-6d037d77875e","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"81b2b226-134f-4af1-8b53-6bd66438718c","text":"chandra gas well"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/TurbineMeter_Icon_23.42.svg","Name":"Chandra","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"10aa5ce0-c6b7-410a-872e-d17a57a5c141","EntityType":"Turbine","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"2c2e4716-f8bd-4e3e-86e4-0dd94386865d","text":"RK GGG"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"Tank_0901","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"128c8be0-fa8e-4052-a172-9b50f3b97a6b","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"4a18664b-6541-47ea-ae9c-5698d0baab08","text":"Chittoor"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"ch1234","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"131ec7b6-6502-4c5a-944d-b18c408c6223","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"d9549b36-9f69-463b-8386-55375aa7825d","text":"ab"},"Children":[],"Icon":" https://althingsblob.blob.core.windows.net/fdc/Area_Icon_105.39.svg","Name":"RK Area","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"15559790-9bac-4526-8d72-35865644d8a5","EntityType":"Area","typeOfFiled":"Hierarchy","formValidate":false},{"parent":{"id":"991e38e5-5928-404c-959e-5071db53654a","text":"Area"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"kslocation","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"16cb8cd4-d362-49f9-81aa-5ea33ac97183","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"db826058-090b-418e-a5be-e2b1da8a3c47","text":"WEEEEEEEEE"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"My Tank","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1a522a05-9055-441c-b22d-0215fd1635b9","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"0170754b-88b3-409e-9525-5538187817b2","text":"GasWell"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"T2","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1a64efce-f553-4bb9-8a72-e7bde7b49a32","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"3fb99511-2d23-4da3-b446-7bba6c98cd4d","text":"abc"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"Tank99o","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1b32d0e9-1d9b-48de-9db3-b12904c2ba20","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"2a56dc1d-4ada-4624-bd9e-f17cdd6d7511","text":"Banglore"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"MondayOrifice","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1b7aea7f-bded-448e-b390-bc0aefad6c19","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"16c50839-f406-4ff6-bff2-634ab240844d","text":"Newwell"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/TurbineMeter_Icon_23.42.svg","Name":"T1","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1c2898f8-fba7-41a1-9c77-190564594eb4","EntityType":"Turbine","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"ee3419ce-60f5-4dbc-9e0e-5a66a8d004a0","text":"ABBCDDDDD Well"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"abvcd tankkk","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1db3c716-b0b7-472f-a813-d1c0f1556da8","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"91502460-c2ba-4c5b-8552-b755cf704d0d","text":"RK Field"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"GWsant6612","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1e234b91-1c29-4c37-9366-af3c18dafafc","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"aa2d8662-f664-4a61-868b-22dad19aeedf","text":"WWW"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"ORIFICE38","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"1ef85eb9-075b-4abb-8308-00bafce771ad","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"b8bac5bb-7fdf-4dbf-881b-8063d35f36b3","text":"Oil Well"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"Gas10:50AM","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"2014dad0-6777-4624-8957-45195441f452","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"31858e5e-c2db-4371-beb8-3ded8f92842e","text":"TRTRT"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"suv orifice","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"204b5fca-5ee0-4e9a-8161-1d0eb0ee8d88","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"2a56dc1d-4ada-4624-bd9e-f17cdd6d7511","text":"Banglore"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"SixthOriffice","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"2814458d-ba09-4e00-bf60-10d564e2cb44","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"04aa35ee-a85a-4287-a1fa-5f7c3ad29510","text":"Chandu Area "},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"Chandu Well","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"28a48e86-526b-4d55-aaa7-f07e8ac966d1","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"7d911577-8aa7-48d9-9177-6fe51d0a106b","text":"RK Well"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/TurbineMeter_Icon_23.42.svg","Name":"T1","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"2a553715-1520-427f-bdad-8211b04a3e3e","EntityType":"Turbine","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"50c241a7-11a4-4ed3-9448-5b7ff3a4fed2","text":"FieldBanglr"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"Banglore","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"2a56dc1d-4ada-4624-bd9e-f17cdd6d7511","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"e9dcf187-7186-4aa8-8dd2-0ed48e2271ae","text":"GasWell"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"TOrifice","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"2b938ffc-01a5-4695-8b8b-a9fd550d2c45","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"991e38e5-5928-404c-959e-5071db53654a","text":"Area"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"sivakarna465","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"2fe5d4c5-8304-4895-a2d6-6f16b8250d41","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"249c91a0-fae3-4e76-87c5-221e1b0f8164","text":"GGGGG"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"OOOOOOOO","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"3413bf1c-126c-4813-96a1-ccc4b9d75637","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":true},{"parent":{"id":"4a18664b-6541-47ea-ae9c-5698d0baab08","text":"Chittoor"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"Wellchittor","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"34a4362d-526d-429a-b991-e13fea2abf0b","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"991e38e5-5928-404c-959e-5071db53654a","text":"Area"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"RRRRR","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"360713fc-842a-42d4-9658-3c903ab421ca","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"48ba1807-3eee-4d6e-ab2f-28c738f7f945","text":"Marathalli"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"jaOrifice","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"382563e8-c667-4e58-8e81-e7e6f80ff4fb","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"e9dcf187-7186-4aa8-8dd2-0ed48e2271ae","text":"GasWell"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/OrificeMeter_Icon_23.42.svg","Name":"werty","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"3851585e-c7a7-4129-8351-aae10bda8a9a","EntityType":"Orifice","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"34a4362d-526d-429a-b991-e13fea2abf0b","text":"Wellchittor"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Tank_Icon_46.84.svg","Name":"Tank","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"3864c99b-bdb2-41f2-94b9-6c436bf546c9","EntityType":"Tank","typeOfFiled":"Equipment","formValidate":false},{"parent":{"id":"91502460-c2ba-4c5b-8552-b755cf704d0d","text":"RK Field"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"WWW","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"3b9027e8-f16a-457c-ae88-ebfb2f875073","EntityType":"Well","typeOfFiled":"Locations","formValidate":false},{"parent":{"id":"01d6e406-f8c4-4ad6-84c2-fc58f89e5dfa","text":"my field 2"},"Children":[],"Icon":"https://althingsblob.blob.core.windows.net/fdc/Header_Icon_58.55.svg","Name":"LWELL","BoundaryName":null,"AreaName":null,"Location":null,"ModifiedBy":null,"EntityId":"3f0f5d7f-bbf9-4556-9f33-d8b627b6738e","EntityType":"Well","typeOfFiled":"Locations","formValidate":false, "specialParents": [{
  	"id": "0d4d3bc4-7a67-46d2-9993-69849d6ef0f5","color_code":"transparent" 
    }
