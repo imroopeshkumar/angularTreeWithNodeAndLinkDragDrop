@@ -34,7 +34,7 @@ export class AppComponent {
     /**
      * Defining current height for aspectratio purpose
      */
-count=0;
+    count = 0;
     currentHeight: number;
     /**
      * Assigning the current width to a variable
@@ -123,14 +123,27 @@ count=0;
      * }
      */
     ngAfterViewInit() {
-        console.log(constants.data);
-        let treeeeee = this.flatToHierarchy(constants.data2);
+        // console.log(constants.data);
+        let treeeeee = this.flatToHierarchy(constants.data);
         treeeeee = treeeeee[0];
-        console.log(treeeeee)
+        // console.log(treeeeee)
         this.renderTree(treeeeee, this.nodeClickHandler);
+        // setTimeout(() => {
+        //     constants.data.forEach(element => {
+        //         if ('specialParents' in element) {
+        //             console.log(element);
+        //             console.log(element.specialParents)
+        //             element.specialParents.forEach(e => {
+
+        //                 this.addSpecialParent2(element, e);
+        //             });
+        //         }
+        //     })
+    
+        // }, 1000);
         let property = 'specialParents';
 
-        d3.select('body').on('click', ()=>{
+        d3.select('body').on('click', () => {
             // console.log(d3.mouse(this));
         })
 
@@ -163,7 +176,7 @@ count=0;
             all[Element.EntityId] = Element;
         });
 
-        console.log(JSON.stringify(all))
+        // console.log(JSON.stringify(all))
 
         // console.log(all);
 
@@ -352,13 +365,11 @@ count=0;
                     })
                 }
             }
-            if (d.depth > 100) {
-                console.log(d.depth);
-            }
+
             d.y = d.depth * constants.renderOptions.spaceBetweenDepthLevels;
-            if (d.y > 10000) {
-                console.log('big' + d.y)
-            }
+            console.log('y'+d.y)
+            console.log('x'+d.x)
+            // console.log(d.y)
             d.x0 = d.x;
             d.y0 = d.y;
 
@@ -389,7 +400,7 @@ count=0;
         this.drawNodes(nodes);
 
         setTimeout(() => {
-            console.log(this.links)
+            // console.log(this.links)
             this.drawLinks(this.links)
 
         }, 200);
@@ -641,7 +652,7 @@ count=0;
         //    .attr("y", -15)
         //    .attr("width", 33)
         //    .attr("height", 33)
-            d3.select('svg').selectAll('text').remove();
+        d3.select('svg').selectAll('text').remove();
 
         nodeEnter.append('circle').attr('r', 25)
         nodeUpdate.append("text")
@@ -665,6 +676,21 @@ count=0;
                     this.intializeNodesLinks();
                 }, 250));
         });
+
+
+        setTimeout(() => {
+            constants.data.forEach(element => {
+                if ('specialParents' in element) {
+                    console.log(element);
+                    console.log(element.specialParents)
+                    element.specialParents.forEach(e => {
+
+                        this.addSpecialParent2(element, e);
+                    });
+                }
+            })
+    
+        }, 1000);
 
 
 
@@ -747,14 +773,14 @@ count=0;
             .on("end", dragEnd)
 
         function dragStart(d) {
-            console.log("dragStart");
+            // console.log("dragStart");
             dragStarted = true;
             self.dragNodedata = tree(d).descendants();
             d3.event.sourceEvent.stopPropagation();
         }
 
         function drag_drag(d) {
-            console.log("drag_drag");
+            // console.log("drag_drag");
             if (dragStarted) {
                 domNode = this;
                 initiateDrag(d, domNode);
@@ -873,14 +899,14 @@ count=0;
 
         this.link = link
 
-        constants.data.forEach(element => {
-            // if ('specialParents' in element) {
-            //     console.log(element);
-            //     element.specialParents.forEach(e => {
-            //         this.addSpecialParent2(element, e);
-            //     });
-            // }
-        })
+        // constants.data.forEach(element => {
+        //     if ('specialParents' in element) {
+        //         console.log(element);
+        //         element.specialParents.forEach(e => {
+        //             this.addSpecialParent2(element, e);
+        //         });
+        //     }
+        // })
 
         function linkDragStart(d) {
             d3.event.sourceEvent.stopPropagation();
@@ -892,7 +918,9 @@ count=0;
         }
 
         function linkDragEnd(d) {
+           let  nodeid = "";
             if (self.selectedNode && self.draggingLink) {
+                nodeid = self.selectedNode.id;
                 d.target.data.colorCode = "transparent"
                 self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode, id: self.linkIds += 1 }])
                 self.updateOldLink(d.id);
@@ -904,17 +932,17 @@ count=0;
 
             if (!('specialParents' in d.target.data)) {
                 console.log('nospecialparents');
-                d.target.data.specialParents = [];
-                d.target.data.specialParents.push({
-                    'id': d.source.data.EntityId,
+                d.source.data.specialParents = [];
+                d.source.data.specialParents.push({
+                    'id': nodeid,
                     'color_code': 'normal'
                 });
 
             }
 
             else {
-                d.target.data.specialParents.push({
-                    'id': d.source.data.EntityId,
+                d.source.data.specialParents.push({
+                    'id': nodeid,
                     'color_code': 'normal'
                 });
             }
@@ -1125,12 +1153,17 @@ count=0;
         });
         if (!linkExist) {
             this.links.push(linkData[0])
-            if (linkData[0].source.children)
-                linkData[0].source.children.push(self.selectedNode);
-            else {
-                linkData[0].source.children = []
-                linkData[0].source.children.push(self.selectedNode);
-            }
+            // if (linkData[0].source.children)
+            //     linkData[0].source.children.push(self.selectedNode);
+            // else {
+            //     linkData[0].source.children = []
+            //     linkData[0].source.children.push(self.selectedNode);
+            // }
+            // this.addSpecialParent2()
+            // linkData[0].source.data.data_targets_id = [{
+            //     id: linkData[0].target.data.product_id,
+            //     type: linkData[0].target.data.type
+            //    }];
             let link = this.svg.append("path").data(linkData)
                 .attr("id", function (d) {
                     return d.id
@@ -1185,8 +1218,12 @@ count=0;
             else
                 self.isChecked = true;
             if (self.selectedNode && self.draggingLink) {
-                d.target.data.colorCode = "transparent"
-                self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode }])
+                d.target.data.colorCode = "transparent";
+                let src = self.selectedNode;
+                let tgt = self.draggingLink.source;
+                console.log('target' +tgt)
+                // self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode }])
+                self.addSpecialParent2(src, tgt);
                 self.updateOldLink(d.id);
             }
             self.selectedNode = null;
@@ -1254,7 +1291,6 @@ count=0;
                 y2 = y2 + (target.width / 2)
                 return "M" + y1 + "," + x1 +
                     " " + y2 + "," + x2;
-
             }
         }
         catch (ex) {
@@ -1313,7 +1349,7 @@ count=0;
     redrawGraph() {
         $('svg').remove();
         this.svg = null;
-        this.renderTree(this.generateTree(constants.data2), this.nodeClickHandler);
+        this.renderTree(this.generateTree(constants.data), this.nodeClickHandler);
 
     }
 
