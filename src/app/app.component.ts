@@ -679,13 +679,22 @@ export class AppComponent {
 
 
         setTimeout(() => {
-            constants.data.forEach(element => {
-                if ('specialParents' in element) {
-                    console.log(element);
-                    console.log(element.specialParents)
-                    element.specialParents.forEach(e => {
+            // constants.data.forEach(element => {
+            //     if ('specialParents' in element) {
+            //         console.log(element);
+            //         console.log(element.specialParents)
+            //         element.specialParents.forEach(e => {
 
-                        this.addSpecialParent2(element, e);
+            //             this.addSpecialParent2(element, e);
+            //         });
+            //     }
+            // })
+
+            self.root.eachBefore(element=> {
+                if ('specialParents2' in element.data) {
+                    element.data.specialParents2.forEach(e => {
+                        
+                        this.addSpecialParent2(element.data, e);
                     });
                 }
             })
@@ -957,9 +966,31 @@ export class AppComponent {
         console.log(self);
         // let self = this;
         let  nodeid = "";
-         if (self.selectedNode && self.draggingLink) {
-             nodeid = self.selectedNode.id;
-             d.target.data.colorCode = "transparent"
+        if (self.selectedNode && self.draggingLink) {
+            nodeid = d.source.data.EntityId;
+            d.target.data.colorCode = "transparent";
+            self.root.eachBefore(element => {
+                if (element.data.EntityId === self.selectedNode.data.EntityId) {
+                    if (!('specialParents2  ' in element.data)) {
+                        console.log('nospecialparents');
+                        element.data.specialParents2 = [];
+                        element.data.specialParents2.push({
+                            'id': nodeid,
+                            'color_code': 'normal'
+                        });
+
+                    }
+
+                    else {
+                        element.data.specialParents2.push({
+                            'id': nodeid,
+                            'color_code': 'normal'
+                        });
+                    }
+                }
+            })
+             
+   
              self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode, id: self.linkIds += 1 }])
              self.updateOldLink(d.id);
          }
@@ -968,22 +999,7 @@ export class AppComponent {
          self.draggingLink = null;
          self.draggingNode = null;
 
-         if (!('specialParents' in d.target.data)) {
-             console.log('nospecialparents');
-             d.source.data.specialParents = [];
-             d.source.data.specialParents.push({
-                 'id': nodeid,
-                 'color_code': 'normal'
-             });
-
-         }
-
-         else {
-             d.source.data.specialParents.push({
-                 'id': nodeid,
-                 'color_code': 'normal'
-             });
-         }
+         
 
          console.log(d.target);
      }
