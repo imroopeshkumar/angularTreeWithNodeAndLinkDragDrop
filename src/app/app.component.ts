@@ -527,7 +527,7 @@ export class AppComponent {
     }
 
     //Function to update the temporary connector indicating dragging affiliation
-    updateTempConnector = () => {
+    updateTempConnector() {
         let self = this;
         var data = [];
         if (self.draggingNode !== null && self.selectedNode !== null) {
@@ -891,9 +891,9 @@ export class AppComponent {
             })
             .attr("stroke", "#ccc")
             .call(d3.drag()
-                .on("start", linkDragStart)
-                .on("drag", linkDragging)
-                .on("end", linkDragEnd));
+                .on("start", this.linkDragStart.bind(this))
+                .on("drag", self.linkDragging.bind(self))
+                .on("end", this.linkDragEnd.bind(self)));
 
 
 
@@ -908,47 +908,10 @@ export class AppComponent {
         //     }
         // })
 
-        function linkDragStart(d) {
-            d3.event.sourceEvent.stopPropagation();
-        }
+       
 
-        function linkDragging(d) {
-            //console.log("linkDragging")
-            self.draggingLink = d;
-        }
+   
 
-        function linkDragEnd(d) {
-           let  nodeid = "";
-            if (self.selectedNode && self.draggingLink) {
-                nodeid = self.selectedNode.id;
-                d.target.data.colorCode = "transparent"
-                self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode, id: self.linkIds += 1 }])
-                self.updateOldLink(d.id);
-            }
-            self.selectedNode = null;
-            self.updateTempConnector();
-            self.draggingLink = null;
-            self.draggingNode = null;
-
-            if (!('specialParents' in d.target.data)) {
-                console.log('nospecialparents');
-                d.source.data.specialParents = [];
-                d.source.data.specialParents.push({
-                    'id': nodeid,
-                    'color_code': 'normal'
-                });
-
-            }
-
-            else {
-                d.source.data.specialParents.push({
-                    'id': nodeid,
-                    'color_code': 'normal'
-                });
-            }
-
-            console.log(d.target);
-        }
 
         maxTargetsCount = 0;
         // UPDATE
@@ -988,6 +951,43 @@ export class AppComponent {
      * }
      */
 
+
+    linkDragEnd(d) {
+        let self =this;
+        console.log(self);
+        // let self = this;
+        let  nodeid = "";
+         if (self.selectedNode && self.draggingLink) {
+             nodeid = self.selectedNode.id;
+             d.target.data.colorCode = "transparent"
+             self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode, id: self.linkIds += 1 }])
+             self.updateOldLink(d.id);
+         }
+         self.selectedNode = null;
+         this.updateTempConnector();
+         self.draggingLink = null;
+         self.draggingNode = null;
+
+         if (!('specialParents' in d.target.data)) {
+             console.log('nospecialparents');
+             d.source.data.specialParents = [];
+             d.source.data.specialParents.push({
+                 'id': nodeid,
+                 'color_code': 'normal'
+             });
+
+         }
+
+         else {
+             d.source.data.specialParents.push({
+                 'id': nodeid,
+                 'color_code': 'normal'
+             });
+         }
+
+         console.log(d.target);
+     }
+
     addSpecialParent2(source, target) {
         let self = this;
         console.log(this.nodesMap);
@@ -1007,42 +1007,13 @@ export class AppComponent {
             })
             .attr('stroke', 'blue')
             .call(d3.drag()
-                .on("start", linkDragStart)
-                .on("drag", linkDragging)
-                .on("end", linkDragEnd));
+                .on("start", this.linkDragStart.bind(self))
+                .on("drag", self.linkDragging.bind(self))
+                .on("end", this.linkDragEnd.bind(self)));
 
-        function linkDragStart(d) {
-            d3.event.sourceEvent.stopPropagation();
-
-        }
-
-        function linkDragging(d) {
-            //console.log("speciallinkDragging")
-            self.draggingLink = d;
-            // console.log(d);
-        }
-
-        function linkDragEnd(d) {
-            //console.log("speciallinkDragEnd")
-            if (self.isChecked)
-                self.isChecked = false;
-            else
-                self.isChecked = true;
-            if (self.selectedNode && self.draggingLink) {
-                d.target.data.colorCode = "transparent";
-                let index = self.draggingLink.source.children.indexOf(self.draggingLink.target);
-                self.draggingLink.source.children.splice(index, 1);
-                self.draggingLink.target.parent = null;
-                self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode }])
-                self.updateOldLink(d.id);
-            }
-            self.selectedNode = null;
-            self.updateTempConnector();
-            self.draggingLink = null;
-            self.draggingNode = null;
+   
 
 
-        }
     }
 
 
@@ -1103,37 +1074,14 @@ export class AppComponent {
                         }
                     })
                     .call(d3.drag()
-                        .on("start", linkDragStart)
-                        .on("drag", linkDragging)
-                        .on("end", linkDragEnd))
+                        .on("start", self.linkDragStart.bind(self))
+                        .on("drag", self.linkDragging.bind(self))
+                        .on("end", this.linkDragEnd.bind(self)))
             });
 
-        function linkDragStart(d) {
-            d3.event.sourceEvent.stopPropagation();
 
-        }
+        
 
-        function linkDragging(d) {
-            //console.log("speciallinkDragging")
-            self.draggingLink = d;
-        }
-
-        function linkDragEnd(d) {
-            //console.log("speciallinkDragEnd")
-            if (self.isChecked)
-                self.isChecked = false;
-            else
-                self.isChecked = true;
-            if (self.selectedNode && self.draggingLink) {
-                d.target.data.colorCode = "transparent"
-                self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode }])
-                self.updateOldLink(d.id);
-            }
-            self.selectedNode = null;
-            self.updateTempConnector();
-            self.draggingLink = null;
-            self.draggingNode = null;
-        }
 
     }
 
@@ -1181,9 +1129,9 @@ export class AppComponent {
                     }
                 })
                 .call(d3.drag()
-                    .on("start", linkDragStart)
-                    .on("drag", linkDragging)
-                    .on("end", linkDragEnd));
+                    .on("start", self.linkDragStart.bind(self))
+                    .on("drag", self.linkDragging.bind(self))
+                    .on("end", this.linkDragEnd.bind(self)));
         }
         else {
             let link = this.svg.selectAll("path.link")
@@ -1202,35 +1150,9 @@ export class AppComponent {
                 })
         }
 
-        function linkDragStart(d) {
-            d3.event.sourceEvent.stopPropagation();
-        }
 
-        function linkDragging(d) {
-            //console.log("NewlinkDragging")
-            self.draggingLink = d;
-        }
 
-        function linkDragEnd(d) {
-            //console.log("NewlinkDragEnd")
-            if (self.isChecked)
-                self.isChecked = false;
-            else
-                self.isChecked = true;
-            if (self.selectedNode && self.draggingLink) {
-                d.target.data.colorCode = "transparent";
-                let src = self.selectedNode;
-                let tgt = self.draggingLink.source;
-                console.log('target' +tgt)
-                // self.addNewLink([{ source: self.draggingLink.source, target: self.selectedNode }])
-                self.addSpecialParent2(src, tgt);
-                self.updateOldLink(d.id);
-            }
-            self.selectedNode = null;
-            self.updateTempConnector();
-            self.draggingLink = null;
-            self.draggingNode = null;
-        }
+  
 
     }
 
@@ -1297,6 +1219,16 @@ export class AppComponent {
             return;
         }
 
+    }
+
+    linkDragStart(d) {
+        d3.event.sourceEvent.stopPropagation();
+    }
+
+    linkDragging(d) {
+        
+        //console.log("speciallinkDragging")
+        this.draggingLink = d;
     }
     /**
      * This method will trigger ,after node hasbeen dragged available in graph canvas
